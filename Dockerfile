@@ -1,4 +1,5 @@
-FROM frolvlad/alpine-glibc:alpine-3.18
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
 
 # NGINX
 RUN apk add --no-cache nginx
