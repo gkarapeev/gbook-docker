@@ -13,6 +13,9 @@ COPY gbook-backend/dist /gbook
 COPY gbook-backend/.env /gbook/.env
 COPY gbook-backend/db/data.db /gbook/db/data.db
 
-WORKDIR /gbook
+#DB
+RUN apk add --no-cache sqlite
 
+# RUN
+WORKDIR /gbook
 CMD ["sh", "-c", "./this_project_id_285410 & nginx -g 'daemon off;'"]
